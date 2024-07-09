@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block content%}
+  <ul class="list-group">
+  {%for blog in blogs%}
+      <li class="list-group-item">
+        <a href="{%url 'blog' blog.id %}">
+          {% if blog.image %}
+          <img src="{{blog.image.url}}" width="300" height="300"style="border: solid green 2px; border-radius:1000px;margin-right:10px" />
+          {% endif %}
+          {{blog.title}}</a>
+      </li>
+    {%endfor%}
+    </ul>
+  {%endblock%}

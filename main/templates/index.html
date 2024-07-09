@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block content%}
+  <p>{{about_site}}</p>
+  <a href="{%url 'blogs'%}"> Блог</a>
+  <h1>Hello, world!</h1>
+
+
+  <ul class="list-group">
+  {%for item in news%}
+    <li class="list-group-item">
+      {{item}}
+    </li>
+
+  {%endfor%}
+  </ul>
+{%endblock%}
